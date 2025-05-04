@@ -220,29 +220,6 @@ body {
     transition: all 0.5s ease;
 }
 
-.bulb-pagination__list {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 34px;
-    padding: 0 10px;
-}
-
-.bulb__pagination {
-    padding: 10px 15px;
-    background-color: #FFCA00;
-    border: 1px solid #CCA101;
-    border-radius: 10px;
-    text-decoration: none;
-    color: #000;
-    transition: all 0.3s ease;
-}
-
-.bulb__pagination:hover {
-    background-color: #e0b403;
-}
-
 .company_logos {
     max-width: 1200px;
     margin: 34px auto;
@@ -298,10 +275,6 @@ body {
 
     .company_logos {
         grid-template-columns: repeat(6, minmax(auto, 136px));
-    }
-
-    .bulb-pagination__list {
-        padding: 0 10px;
     }
 }
 
@@ -375,12 +348,6 @@ body {
 
     .header__nav-list {
         padding: 0;
-    }
-
-    .bulb-pagination__list {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
     }
 }
 
