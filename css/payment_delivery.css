@@ -92,7 +92,7 @@ body {
     max-width: 1200px;
     width: 100%;
     margin: 34px auto;
-    padding: 0;
+    padding: 0 10px;
 }
 
 .main h1 {
@@ -106,15 +106,19 @@ body {
     left: 10px;
     bottom: 0;
     content: "";
-    width: 80px;
+    width: 200px;
     height: 12px;
     background-color: #FFCA00;
     z-index: -1;
     border-radius: 30px;
 }
 
-.main p, i, h3 {
+.main h3, p, i {
     margin-left: 10px;
+}
+
+.order-process__list li {
+    padding: 5px 0;
 }
 
 .company_logos {
