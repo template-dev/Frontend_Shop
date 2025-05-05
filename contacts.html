@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/payment_delivery.css">
+    <link rel="stylesheet" href="css/contacts.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/slider.js" defer></script>
-    <title>Payment & Delivery</title>
+    <title>About Us</title>
 </head>
 <body>
     <header class="header">
@@ -15,9 +15,9 @@
             <div class="header__logo"></div>
             <ul class="header__nav-list">
                 <li class="header__nav-item"><a class="header__nav-link" href="index.html">Home Page</a></li>
-                <li class="header__nav-item"><a class="header__nav-link header__nav-link--active">Payment and Delivery</a></li>
+                <li class="header__nav-item"><a class="header__nav-link" href="payment_delivery.html">Payment and Delivery</a></li>
                 <li class="header__nav-item"><a class="header__nav-link" href="about.html">About Us</a></li>
-                <li class="header__nav-item"><a class="header__nav-link" href="contacts.html">Contacts</a></li>
+                <li class="header__nav-item"><a class="header__nav-link header__nav-link--active">Contacts</a></li>
                 <li class="header__nav-item"><a class="header__nav-link" href="favorites.html">
                     <span class="count">0</span>
                     <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -37,41 +37,42 @@
         <ul class="breadcrumbs__list">
             <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Home Page</a></li>
             <li class="breadcrumbs__item">/</li>
-            <li class="breadcrumbs__item">Payment & Delivery</li>
+            <li class="breadcrumbs__item">About Us</li>
         </ul>
     </section>
     <main class="main">
-        <h1>Payment & Delivery</h1>
-        <h3>🛒 Ordering Process:</h3>
-        <ol class="order-process__list">
-            <li><strong>Place Your Order</strong> - Add your favorite Eco Light Bulb Market products to the cart and proceed to checkout.</li>
-            <li><strong>Manager Confirmation</strong> - Our team will contact you within 24 hours (Mon-Fri) to confirm the order details, availability, and delivery options.</li>
-            <li><strong>Payment & Shipping</strong> - Once everything is confirmed, we’ll proceed with payment and prepare your package for delivery!</li>
-        </ol>
-        <h3>💳 Payment Methods:</h3>
-        <ul class="order-process__list">
-            <li>Bank Transfer (Secure invoice sent via email)</li>
-        </ul>
-        <h3>🚚 Delivery Options:</h3>
-        <ol class="order-process__list">
-            <li>📦 Courier Service - Fast and reliable shipping (2-5 business days, depending on location).</li>
-            <li>📮 Postal Service - Affordable option for smaller orders (3-7 business days).</li>
-            <li>🏡 Local Pickup - Available if you’re near our factory (address shared after order confirmation).</li>
-        </ol>
-        <h3>📦 Shipping Costs:</h3>
-        <ol class="order-process__list">
-            <li>Free delivery on orders over $50 (or equivalent in local currency).</li>
-            <li>Standard shipping fee: $5.99 (varies by region).</li>
-        </ol>
-        <h3>ℹ Important Notes:</h3>
-        <ol class="order-process__list">
-            <li>Delivery times may vary during holidays or peak seasons.</li>
-            <li>Need urgent shipping? Contact us before placing your order for express options.</li>
-            <li>Tracking number will be provided once your order is dispatched.</li>
-        </ol>
-        <h3>📞 Questions?</h3>
-        <p>Email us at support@ecolightbulbmarket.com or call <a href="tel:+15551234567">+1 (555) 123-4567</a> (9 AM - 5 PM, Mon-Fri).</p>
-        <i>Thank you for choosing Eco Light Bulb Market! We're lighting up lives—one bulb at a time. 💡🌿</i>
+        <h1>Contact Us</h1>
+        <div class="contacts__wrapper">
+            <div class="contacts__info">
+                <p>💡 Have questions, need assistance, or want to discuss a bulk order? We'd love to hear from you!</p>
+                <h3>📞 Get in Touch</h3>
+                <ul class="contact__list">
+                    <li><strong>Email</strong>: support@ecolightbulbmarket.com</li>
+                    <li><strong></strong>Phone</strong>: +1 (555) 123-4567 (Mon-Fri, 9 AM – 5 PM EST)</li>
+                    <li><strong></strong>Address</strong>: New York, USA (Local pickup available by appointment)</li>
+                </ul>
+                <h3>🕒 Business Hours</h3>
+                <ul class="contact__list">
+                    <li>Monday - Friday: 9:00 AM – 5:00 PM (EST)</li>
+                    <li>Saturday - Sunday: Closed (except for urgent order support)</li>
+                </ul>
+                <h3>📍 Visit Us (Optional)</h3>
+                <p>If you have a physical store/showroom:</p>
+                <i>"Love eco-friendly lighting? Visit our cozy showroom in New York! Book an appointment to discuss custom solutions or see our bulbs in person."</i>
+            </div>
+            <div class="contacts__form">
+                <form action="">
+                    <div class="contact-form__name-surname">
+                        <input type="text" name="first_name" id="first_name" placeholder="First name" required>
+                        <input type="text" name="last_name" id="last_name" placeholder="Last name">
+                    </div>
+                    <input type="email" name="email" id="email" placeholder="example@gmain.com" required>
+                    <input type="tel" name="tel" placeholder="+1 (555) 123-4567" pattern="\+?[0-9\s\-\(\)]+">
+                    <textarea name="message" placeholder="Type your message..."></textarea>
+                    <button>Submit</button>
+                </form>
+            </div>
+        </div>
     </main>
     <section class="company_logos">
         <img src="img/ikea-logo.png" width="136" height="76" alt="IKEA logo">
