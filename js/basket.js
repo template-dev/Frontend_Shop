@@ -2,13 +2,26 @@ document.addEventListener('DOMContentLoaded', function() {
     const quantityInputs = document.querySelectorAll('input[name="quantity_number"]');
     const removeButtons = document.querySelectorAll('.basket__remove-item-button');
     const checkoutLink = document.getElementById('checkoutLink');
+    const modal = document.querySelector('.modal__info');
+    const modalCloseBtn = document.querySelector('.modal__close-button');
 
     if (checkoutLink) {
         checkoutLink.addEventListener('click', function(e) {
             e.preventDefault();
+            
+            if (isBasketEmpty()) {
+                modal.style.display = 'flex';
+                return;
+            }
+            
             saveBasketToStorage();
             window.location.href = this.href;
         });
+    }
+    
+    function isBasketEmpty() {
+        const basketItems = document.querySelectorAll('.basket__item');
+        return basketItems.length === 0;
     }
     
     function calculateTotals() {
@@ -44,6 +57,10 @@ document.addEventListener('DOMContentLoaded', function() {
         this.closest('.basket__item').remove();
         calculateTotals();
         });
+    });
+
+    modalCloseBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
     });
     
     calculateTotals();

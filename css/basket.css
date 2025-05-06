@@ -6,6 +6,48 @@ body {
     padding: 0;
     margin: 0;
     background-color: #f0eded;
+    position: relative;
+}
+
+.modal__info {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: -20px;
+    z-index: 999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal__info-wrapper {
+    background-color: #fff;
+    max-width: 400px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.modal__header {
+    display: flex;
+}
+
+.modal__header h3 {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.modal__close-button {
+    background-color: transparent;
+    padding: 10px;
+    border: 0;
+    cursor: pointer;
+}
+
+.modal__close-button:hover {
+    background-color: #e7e5e5;
 }
 
 .header {
