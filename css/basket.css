@@ -10,11 +10,12 @@ body {
 }
 
 .modal__info {
-    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
-    margin-top: -20px;
     z-index: 999;
     display: none;
     justify-content: center;
