@@ -1,6 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
     const quantityInputs = document.querySelectorAll('input[name="quantity_number"]');
     const removeButtons = document.querySelectorAll('.basket__remove-item-button');
+    const checkoutLink = document.getElementById('checkoutLink');
+
+    if (checkoutLink) {
+        checkoutLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            saveBasketToStorage();
+            window.location.href = this.href;
+        });
+    }
     
     function calculateTotals() {
         let subtotal = 0;
@@ -39,3 +48,28 @@ document.addEventListener('DOMContentLoaded', function() {
     
     calculateTotals();
 });
+
+function saveBasketToStorage() {
+    const basketItems = [];
+    
+    document.querySelectorAll('.basket__item').forEach(item => {
+        basketItems.push({
+            image: item.querySelector('td:nth-child(1) img').src,
+            title: item.querySelector('td:nth-child(2)').textContent,
+            description: item.querySelector('td:nth-child(3)').textContent,
+            price: parseFloat(item.querySelector('td:nth-child(4)').textContent),
+            quantity: parseInt(item.querySelector('input[name="quantity_number"]').value)
+        });
+    });
+    
+    const subtotal = document.querySelector('input[name="subtotal"]').value;
+    const delivery = document.querySelector('input[name="delivery"]').value;
+    const total = document.querySelector('input[name="total"]').value;
+    
+    localStorage.setItem('basket', JSON.stringify(basketItems));
+    localStorage.setItem('basket_totals', JSON.stringify({
+        subtotal,
+        delivery,
+        total
+    }));
+}
