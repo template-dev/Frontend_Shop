@@ -6,6 +6,9 @@ body {
     padding: 0;
     margin: 0;
     background-color: #f0eded;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .header {
@@ -66,101 +69,43 @@ body {
     background-color: #FFCA00;
 }
 
-.breadcrumbs {
-    max-width: 1200px;
-    width: 100%;
-    margin: 34px auto;
-}
-
-.breadcrumbs__list {
-    padding: 0 10px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    list-style-type: none;
-}
-
-.breadcrumbs__link {
-    color: #747171;
-    text-decoration-style: dotted;
-}
-
-.breadcrumbs__link:hover {
-    text-decoration: none;
-}
-
 .main {
+    flex-grow: 1;
     max-width: 1200px;
     width: 100%;
     margin: 34px auto;
     padding: 0;
-}
-
-.main h1 {
-    position: relative;
-    z-index: 1;
-    padding: 0 10px;
-}
-
-.main h1::before {
-    position: absolute;
-    left: 10px;
-    bottom: 0;
-    content: "";
-    width: 80px;
-    height: 12px;
-    background-color: #FFCA00;
-    z-index: -1;
-    border-radius: 30px;
-}
-
-.product__wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.product__img img {
-    max-width: 550px;
-    width: 100%;
-    height: auto;
-}
-
-.product__img, .product__info {
-    flex: 1;
-}
-
-.product__info {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.product__description {
-    flex: 1;
+.main__text {
+    display: flex;
+    align-items: center;
 }
 
-.product__info p {
-    line-height: 22px;
+.digit_four {
+    font-weight: 700;
+    font-size: 280px;
+    margin: 0;
 }
 
-.product__cost-text {
-    font-size: 22px;
+.main__text img {
+    max-width: 230px;
+    width: 100%;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
 }
 
-.product__button {
-    padding: 15px;
-    cursor: pointer;
-    background-color: #000;
-    color: #fff;
-    font-size: 16px;
-    transition: all 0.3s ease;
-    border: none;
-    box-sizing: border-box;
-}
-
-.product__button:hover {
-    background-color: #FFCA00;
-    color: #000;
+.not-found__text {
+    font-weight: 700;
+    font-size: 28px;
+    text-align: center;
 }
 
 .company_logos {
@@ -249,31 +194,6 @@ body {
     .light-bulbs__item {
         width: 100%;
     }
-
-    .header__nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .header__nav-list {
-        padding: 0;
-    }
-
-    .product__wrapper {
-        display: flex;
-        flex-direction: column;
-        
-    }
-
-    .product__img {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-    }
 }
 
 @media (max-width: 582px) {
@@ -303,6 +223,19 @@ body {
     .company_logos {
         grid-template-columns: repeat(2, minmax(auto, 136px));
         justify-content: center;
+    }
+}
+
+@media (max-width: 858px) {
+    .header__nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .header__nav-list {
+        padding: 0;
     }
 }
 
@@ -347,6 +280,42 @@ body {
         padding: 3px 7px;
         border-radius: 50%;
         background-color: #FFCA00;
+    }
+
+    .digit_four {
+        font-weight: 700;
+        font-size: 180px;
+        margin: 0;
+    }
+    
+    .main__text img {
+        max-width: 180px;
+        width: 100%;
+        height: auto;
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+        -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+}
+
+@media (max-width: 430px) {
+    .digit_four {
+        font-weight: 700;
+        font-size: 120px;
+        margin: 0;
+    }
+    
+    .main__text img {
+        max-width: 120px;
+        width: 100%;
+        height: auto;
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+        -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg);
     }
 }
 
